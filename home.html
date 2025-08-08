@@ -1,132 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>🏠 Página Inicial</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <title>aposta.max - Página Inicial</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       background-color: #000;
-      color: #FFD700;
+      color: #fff;
+    }
+
+    header {
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 2px solid #ffd700;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffd700;
+    }
+
+    .auth-buttons button {
+      margin-left: 10px;
+      padding: 8px 16px;
+      background-color: #ffd700;
+      color: #000;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .container {
       display: flex;
     }
 
-    .sidebar {
-      width: 250px;
+    nav {
+      width: 220px;
       background-color: #111;
       padding: 20px;
+      border-right: 2px solid #ffd700;
       height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
     }
 
-    .sidebar h2 {
-      color: #fff;
-      font-size: 18px;
+    nav h2 {
+      font-size: 16px;
       margin-bottom: 20px;
+      color: #fff;
     }
 
-    .sidebar ul {
+    nav ul {
       list-style: none;
       padding: 0;
     }
 
-    .sidebar ul li {
-      padding: 12px 10px;
-      color: #ccc;
+    nav ul li {
+      margin: 12px 0;
+      font-size: 14px;
+      color: #fff;
       cursor: pointer;
-      display: flex;
-      align-items: center;
     }
 
-    .sidebar ul li:hover {
-      background-color: #333;
-      color: #FFD700;
+    nav ul li:hover {
+      color: #ffd700;
     }
 
-    .sidebar ul li i {
-      margin-right: 10px;
-      width: 20px;
-      text-align: center;
-    }
-
-    .main {
-      margin-left: 270px;
+    main {
+      flex: 1;
       padding: 30px;
-      flex-grow: 1;
     }
 
-    #logoutBtn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #FFD700;
-      color: #000;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
+    .banner {
+      background: linear-gradient(to right, #222, #333);
+      padding: 40px;
+      border-radius: 8px;
+      border: 2px solid #ffd700;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .banner h1 {
+      color: #ffd700;
+      font-size: 36px;
+      margin: 0;
+    }
+
+    .banner p {
+      font-size: 16px;
+      margin-top: 10px;
+      color: #fff;
     }
   </style>
 </head>
 <body>
-
-  <div class="sidebar">
-    <h2>🎰 CASSINO</h2>
-    <ul>
-      <li><i class="fas fa-crown"></i> Todos os jogos</li>
-      <li><i class="fas fa-dice"></i> Jogos Slots</li>
-      <li><i class="fas fa-play-circle"></i> Cassino ao vivo</li>
-      <li><i class="fas fa-user"></i> Provedores</li>
-      <li><i class="fas fa-bomb"></i> Mines</li>
-      <li><i class="fas fa-fire"></i> Fortune Tiger</li>
-      <li><i class="fas fa-plane"></i> Aviator</li>
-      <li><i class="fas fa-rocket"></i> Spaceman</li>
-      <li><i class="fas fa-chess-board"></i> Infinite Blackjack</li>
-      <li><i class="fas fa-dice-five"></i> Roleta brasileira</li>
-      <li><i class="fas fa-futbol"></i> Football Studio</li>
-      <li><i class="fas fa-lemon"></i> Fortune Fruits</li>
-    </ul>
-  </div>
-
-  <div class="main">
-    <h1>🏠 Bem-vindo à Casa de Aposta 1 Passo!</h1>
-    <p id="mensagemBoasVindas">Você está logado com sucesso.</p>
-
-    <div class="dados">
-      <p><strong>👤 Nome:</strong> <span id="nomeUsuario">Carregando...</span></p>
-      <p><strong>📧 E-mail:</strong> <span id="emailUsuario">Carregando...</span></p>
-      <p><strong>🏦 Conta bancária:</strong> <span id="contaUsuario">Não cadastrada</span></p>
+  <header>
+    <div class="logo">aposta.<strong>max</strong></div>
+    <div class="auth-buttons">
+      <button onclick="window.location.href='login.html'">Entrar</button>
+      <button onclick="window.location.href='cadastro.html'">Registrar</button>
     </div>
+  </header>
 
-    <button id="logoutBtn">Sair</button>
+  <div class="container">
+    <nav>
+      <h2>CASSINO 🎰</h2>
+      <ul>
+        <li>🎲 Todos os jogos</li>
+        <li>🎰 Jogos Slots</li>
+        <li>🧑‍💼 Cassino ao vivo</li>
+        <li>🏷️ Provedores</li>
+        <li>💣 Mines</li>
+        <li>🐯 Fortune Tiger</li>
+        <li>🛩️ Aviator</li>
+        <li>🚀 Spaceman</li>
+        <li>🃏 Infinite Blackjack</li>
+        <li>🎡 Roleta brasileira</li>
+        <li>⚽ Football Studio</li>
+        <li>🍒 Fortune Fruits</li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="banner">
+        <h1>Bem-vindo à aposta.max</h1>
+        <p>Ganhe cashback, jogue com responsabilidade e aproveite os melhores jogos online!</p>
+      </div>
+      <!-- Aqui você pode adicionar mais conteúdo depois, como recomendações, estatísticas, etc. -->
+    </main>
   </div>
-
-  <script>
-    // Proteção de rota
-    const logado = localStorage.getItem("logado");
-    if (!logado) {
-      window.location.href = "login.html";
-    }
-
-    // Dados do usuário
-    const nome = localStorage.getItem("nomeUsuario") || "Usuário";
-    const email = localStorage.getItem("emailUsuario") || "E-mail não encontrado";
-    const conta = localStorage.getItem("contaBancaria") || "Não cadastrada";
-
-    document.getElementById("mensagemBoasVindas").innerText = `Olá, ${nome || email}! Você está logado com sucesso.`;
-    document.getElementById("nomeUsuario").innerText = nome;
-    document.getElementById("emailUsuario").innerText = email;
-    document.getElementById("contaUsuario").innerText = conta;
-
-    // Logout
-    document.getElementById("logoutBtn").addEventListener("click", () => {
-      localStorage.clear();
-      window.location.href = "login.html";
-    });
-  </script>
 </body>
 </html>
