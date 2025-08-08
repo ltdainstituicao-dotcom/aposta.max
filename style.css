@@ -64,3 +64,46 @@ footer img {
     height: 32px;
     cursor: pointer;
 }
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #111;
+}
+
+.auth-container {
+    background-color: #000;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #ff0;
+}
+
+.auth-box h2 {
+    margin-bottom: 20px;
+    color: yellow;
+}
+
+.auth-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.auth-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: yellow;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.auth-box a {
+    color: violet;
+    text-decoration: none;
+}
