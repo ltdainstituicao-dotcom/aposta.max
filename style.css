@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,28 +6,63 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #121212;
-  color: #f1f1f1;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
-/* Menu lateral */
+/* Header */
+header {
+  background-color: #000;
+  color: #ffd700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 30px;
+  border-bottom: 2px solid #ffd700;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.logo span {
+  color: #fff;
+}
+
+.top-actions .btn {
+  margin-left: 12px;
+  background-color: #ffd700;
+  color: #000;
+  padding: 8px 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.top-actions .btn:hover {
+  background-color: #e6c200;
+}
+
+/* Sidebar */
 .sidebar {
-  width: 250px;
+  width: 220px;
   background-color: #000;
   padding: 20px;
-  position: fixed;
-  height: 100%;
-  overflow-y: auto;
   border-right: 2px solid #ffd700;
+  position: fixed;
+  top: 66px;
+  bottom: 0;
+  overflow-y: auto;
 }
 
 .sidebar h2 {
+  margin-bottom: 16px;
+  font-size: 16px;
   color: #ffd700;
-  margin-bottom: 20px;
-  font-size: 20px;
 }
 
 .sidebar ul {
@@ -35,108 +70,85 @@ body {
 }
 
 .sidebar ul li {
-  margin: 12px 0;
-}
-
-.sidebar ul li a {
-  color: #f1f1f1;
-  text-decoration: none;
-  padding: 8px 12px;
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-.sidebar ul li a:hover {
-  background-color: #ffd700;
-  color: #000;
-}
-
-.sidebar ul li a i {
-  margin-right: 10px;
-}
-
-/* Cabeçalho (topo) */
-.header {
-  width: 100%;
-  background-color: #1e1e1e;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 250px;
-  height: 60px;
-  z-index: 10;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #ffd700;
-}
-
-.header .buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.header button {
-  background-color: #ffd700;
-  color: #000;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 5px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #fff;
   cursor: pointer;
-  font-weight: bold;
-}
-
-.header button:hover {
-  background-color: #e5c100;
-}
-
-/* Conteúdo principal */
-.main-content {
-  margin-left: 250px;
-  margin-top: 80px;
-  padding: 30px;
-}
-
-.main-content h1 {
-  color: #ffd700;
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.card-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  align-items: center;
 }
 
-.card {
-  background-color: #1e1e1e;
-  border: 1px solid #ffd700;
-  border-radius: 8px;
-  padding: 20px;
-  width: 220px;
-  transition: transform 0.3s;
+.sidebar ul li i {
+  margin-right: 10px;
+  width: 20px;
   text-align: center;
 }
 
-.card:hover {
-  transform: scale(1.05);
-  background-color: #2a2a2a;
+.sidebar ul li:hover {
+  color: #ffd700;
 }
 
-.card h3 {
+/* Main content */
+main {
+  margin-left: 240px;
+  padding: 40px;
+  flex: 1;
+}
+
+.banner {
+  background-color: #222;
+  padding: 40px;
+  border-radius: 8px;
+  border: 2px solid #ffd700;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 32px;
   color: #ffd700;
+}
+
+.banner p {
+  margin: 12px 0 20px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.btn.destaque {
+  background-color: #ffd700;
+  color: #000;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn.destaque:hover {
+  background-color: #e6c200;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  padding: 20px;
+  color: #888;
+  text-align: center;
+  border-top: 2px solid #ffd700;
+  margin-top: auto;
+}
+
+footer .social-links {
   margin-bottom: 10px;
 }
 
-.card p {
-  font-size: 14px;
-  color: #ccc;
+footer .social-links a {
+  color: #ffd700;
+  font-size: 18px;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+footer .social-links a:hover {
+  color: #fff;
 }
