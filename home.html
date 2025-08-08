@@ -4,76 +4,105 @@
   <meta charset="UTF-8" />
   <title>🏠 Página Inicial</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
+      margin: 0;
+      font-family: Arial, sans-serif;
       background-color: #000;
       color: #FFD700;
-      font-family: Arial, sans-serif;
-      margin: 0;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #111;
+      padding: 20px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .sidebar h2 {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
       padding: 0;
     }
 
-    .navbar {
-      background-color: #111;
-      padding: 15px;
+    .sidebar ul li {
+      padding: 12px 10px;
+      color: #ccc;
+      cursor: pointer;
       display: flex;
-      justify-content: space-between;
       align-items: center;
     }
 
-    .navbar h1 {
-      margin: 0;
-      font-size: 20px;
+    .sidebar ul li:hover {
+      background-color: #333;
+      color: #FFD700;
     }
 
-    .navbar button {
+    .sidebar ul li i {
+      margin-right: 10px;
+      width: 20px;
+      text-align: center;
+    }
+
+    .main {
+      margin-left: 270px;
+      padding: 30px;
+      flex-grow: 1;
+    }
+
+    #logoutBtn {
+      margin-top: 20px;
+      padding: 10px 20px;
       background-color: #FFD700;
       color: #000;
       border: none;
-      padding: 10px 20px;
+      border-radius: 5px;
       font-weight: bold;
       cursor: pointer;
-      border-radius: 5px;
-    }
-
-    .container {
-      padding: 30px;
-    }
-
-    .dados {
-      background-color: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-
-    .dados p {
-      margin: 10px 0;
-      font-size: 16px;
-    }
-
-    .titulo {
-      font-size: 26px;
-      font-weight: bold;
-      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="navbar">
-    <h1>🏠 Casa de Aposta 1 Passo</h1>
-    <button id="logoutBtn">Sair</button>
+
+  <div class="sidebar">
+    <h2>🎰 CASSINO</h2>
+    <ul>
+      <li><i class="fas fa-crown"></i> Todos os jogos</li>
+      <li><i class="fas fa-dice"></i> Jogos Slots</li>
+      <li><i class="fas fa-play-circle"></i> Cassino ao vivo</li>
+      <li><i class="fas fa-user"></i> Provedores</li>
+      <li><i class="fas fa-bomb"></i> Mines</li>
+      <li><i class="fas fa-fire"></i> Fortune Tiger</li>
+      <li><i class="fas fa-plane"></i> Aviator</li>
+      <li><i class="fas fa-rocket"></i> Spaceman</li>
+      <li><i class="fas fa-chess-board"></i> Infinite Blackjack</li>
+      <li><i class="fas fa-dice-five"></i> Roleta brasileira</li>
+      <li><i class="fas fa-futbol"></i> Football Studio</li>
+      <li><i class="fas fa-lemon"></i> Fortune Fruits</li>
+    </ul>
   </div>
 
-  <div class="container">
-    <div class="titulo">🎉 Bem-vindo!</div>
+  <div class="main">
+    <h1>🏠 Bem-vindo à Casa de Aposta 1 Passo!</h1>
     <p id="mensagemBoasVindas">Você está logado com sucesso.</p>
 
     <div class="dados">
       <p><strong>👤 Nome:</strong> <span id="nomeUsuario">Carregando...</span></p>
       <p><strong>📧 E-mail:</strong> <span id="emailUsuario">Carregando...</span></p>
-      <p><strong🏦> Conta bancária:</strong> <span id="contaUsuario">Não cadastrada</span></p>
+      <p><strong>🏦 Conta bancária:</strong> <span id="contaUsuario">Não cadastrada</span></p>
     </div>
+
+    <button id="logoutBtn">Sair</button>
   </div>
 
   <script>
@@ -88,7 +117,6 @@
     const email = localStorage.getItem("emailUsuario") || "E-mail não encontrado";
     const conta = localStorage.getItem("contaBancaria") || "Não cadastrada";
 
-    // Exibição
     document.getElementById("mensagemBoasVindas").innerText = `Olá, ${nome || email}! Você está logado com sucesso.`;
     document.getElementById("nomeUsuario").innerText = nome;
     document.getElementById("emailUsuario").innerText = email;
