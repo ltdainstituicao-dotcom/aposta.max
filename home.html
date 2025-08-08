@@ -2,141 +2,48 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>aposta.max - Página Inicial</title>
+  <title>🏠 Aposta Max - Início</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #000;
-      color: #fff;
-    }
-
-    header {
-      background-color: #111;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      border-bottom: 2px solid #ffd700;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #ffd700;
-    }
-
-    .auth-buttons button {
-      margin-left: 10px;
-      padding: 8px 16px;
-      background-color: #ffd700;
-      color: #000;
-      border: none;
-      border-radius: 4px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .container {
-      display: flex;
-    }
-
-    nav {
-      width: 220px;
-      background-color: #111;
-      padding: 20px;
-      border-right: 2px solid #ffd700;
-      height: 100vh;
-    }
-
-    nav h2 {
-      font-size: 16px;
-      margin-bottom: 20px;
-      color: #fff;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    nav ul li {
-      margin: 12px 0;
-      font-size: 14px;
-      color: #fff;
-      cursor: pointer;
-    }
-
-    nav ul li:hover {
-      color: #ffd700;
-    }
-
-    main {
-      flex: 1;
-      padding: 30px;
-    }
-
-    .banner {
-      background: linear-gradient(to right, #222, #333);
-      padding: 40px;
-      border-radius: 8px;
-      border: 2px solid #ffd700;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .banner h1 {
-      color: #ffd700;
-      font-size: 36px;
-      margin: 0;
-    }
-
-    .banner p {
-      font-size: 16px;
-      margin-top: 10px;
-      color: #fff;
-    }
-  </style>
+  <script defer src="home.js"></script> <!-- script para logout e saudação -->
 </head>
 <body>
-  <header>
+
+  <!-- Menu Lateral -->
+  <nav class="sidebar">
+    <h2>CASSINO</h2>
+    <ul>
+      <li><a href="#"><i>🎰</i>Todos os jogos</a></li>
+      <li><a href="#"><i>🃏</i>Jogos Slots</a></li>
+      <li><a href="#"><i>📺</i>Cassino ao vivo</a></li>
+      <li><a href="#"><i>🔧</i>Provedores</a></li>
+      <li><a href="#"><i>💣</i>Mines</a></li>
+      <li><a href="#"><i>🐯</i>Fortune Tiger</a></li>
+      <li><a href="#"><i>✈️</i>Aviator</a></li>
+      <li><a href="#"><i>👨‍🚀</i>Spaceman</a></li>
+      <li><a href="#"><i>🃎</i>Infinite Blackjack</a></li>
+      <li><a href="#"><i>🎯</i>Roleta brasileira</a></li>
+      <li><a href="#"><i>⚽</i>Football Studio</a></li>
+      <li><a href="#"><i>🍌</i>Fortune Fruits</a></li>
+    </ul>
+  </nav>
+
+  <!-- Cabeçalho -->
+  <header class="header">
     <div class="logo">aposta.<strong>max</strong></div>
-    <div class="auth-buttons">
-      <button onclick="window.location.href='login.html'">Entrar</button>
-      <button onclick="window.location.href='cadastro.html'">Registrar</button>
+    <div class="buttons">
+      <span id="saudacaoUsuario"></span>
+      <button id="logoutBtn">Sair</button>
     </div>
   </header>
 
-  <div class="container">
-    <nav>
-      <h2>CASSINO 🎰</h2>
-      <ul>
-        <li>🎲 Todos os jogos</li>
-        <li>🎰 Jogos Slots</li>
-        <li>🧑‍💼 Cassino ao vivo</li>
-        <li>🏷️ Provedores</li>
-        <li>💣 Mines</li>
-        <li>🐯 Fortune Tiger</li>
-        <li>🛩️ Aviator</li>
-        <li>🚀 Spaceman</li>
-        <li>🃏 Infinite Blackjack</li>
-        <li>🎡 Roleta brasileira</li>
-        <li>⚽ Football Studio</li>
-        <li>🍒 Fortune Fruits</li>
-      </ul>
-    </nav>
-
-    <main>
-      <div class="banner">
-        <h1>Bem-vindo à aposta.max</h1>
-        <p>Ganhe cashback, jogue com responsabilidade e aproveite os melhores jogos online!</p>
+  <!-- Conteúdo principal -->
+  <main class="main-content">
+    <h1>🎉 Bem-vindo à plataforma!</h1>
+    <div class="card-container">
+      <div class="card">
+        <h3>Promoção</h3>
+        <p>Até 20% de cashback em apostas semanais.</p>
       </div>
-      <!-- Aqui você pode adicionar mais conteúdo depois, como recomendações, estatísticas, etc. -->
-    </main>
-  </div>
-</body>
-</html>
+      <div class="card">
+        <h3>Novo Jogo</h3>
+        <p>Experimente o Spaceman e aumente suas c
