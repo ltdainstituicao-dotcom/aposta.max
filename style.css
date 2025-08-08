@@ -1,0 +1,66 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: yellow;
+}
+
+.logo span {
+    color: white;
+}
+
+.nav-buttons .btn {
+    background-color: yellow;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.jogos {
+    padding: 20px;
+    text-align: center;
+}
+
+.jogos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.jogo {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+footer img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
