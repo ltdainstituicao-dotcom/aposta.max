@@ -1,36 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>🏠 Página Inicial</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #000;
+      color: #FFD700;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #111;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .navbar button {
+      background-color: #FFD700;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .container {
+      padding: 30px;
+    }
+
+    .dados {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .dados p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .titulo {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🎉 Bem-vindo à Casa de Aposta 1 Passo!</h1>
-    <p id="mensagemBoasVindas">Você está logado com sucesso.</p>
+  <div class="navbar">
+    <h1>🏠 Casa de Aposta 1 Passo</h1>
     <button id="logoutBtn">Sair</button>
   </div>
 
+  <div class="container">
+    <div class="titulo">🎉 Bem-vindo!</div>
+    <p id="mensagemBoasVindas">Você está logado com sucesso.</p>
+
+    <div class="dados">
+      <p><strong>👤 Nome:</strong> <span id="nomeUsuario">Carregando...</span></p>
+      <p><strong>📧 E-mail:</strong> <span id="emailUsuario">Carregando...</span></p>
+      <p><strong🏦> Conta bancária:</strong> <span id="contaUsuario">Não cadastrada</span></p>
+    </div>
+  </div>
+
   <script>
+    // Proteção de rota
     const logado = localStorage.getItem("logado");
     if (!logado) {
       window.location.href = "login.html";
     }
 
-    const nome = localStorage.getItem("nomeUsuario");
-    const email = localStorage.getItem("emailUsuario");
+    // Dados do usuário
+    const nome = localStorage.getItem("nomeUsuario") || "Usuário";
+    const email = localStorage.getItem("emailUsuario") || "E-mail não encontrado";
+    const conta = localStorage.getItem("contaBancaria") || "Não cadastrada";
 
-    const mensagem = nome 
-      ? `Olá, ${nome}! Você está logado com sucesso.` 
-      : `Olá, ${email || "usuário"}! Você está logado com sucesso.`;
+    // Exibição
+    document.getElementById("mensagemBoasVindas").innerText = `Olá, ${nome || email}! Você está logado com sucesso.`;
+    document.getElementById("nomeUsuario").innerText = nome;
+    document.getElementById("emailUsuario").innerText = email;
+    document.getElementById("contaUsuario").innerText = conta;
 
-    document.getElementById("mensagemBoasVindas").innerText = mensagem;
-
+    // Logout
     document.getElementById("logoutBtn").addEventListener("click", () => {
-      localStorage.removeItem("logado");
-      localStorage.removeItem("nomeUsuario");
-      localStorage.removeItem("emailUsuario");
+      localStorage.clear();
       window.location.href = "login.html";
     });
   </script>
